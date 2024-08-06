@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { useSelector , useDispatch } from 'react-redux';
+import { Home, Login, Public } from './containers/public/index';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Routes, Route} from 'react-router-dom';
+import path from './ultis/path';
+
 
 function App() {
+  const { test } = useSelector(state => state.app)
+  console.log(test);
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Routes>
+            <Route path= {path.PUBLIC} element = {<Public/>} >   
+                <Route path= {path.HOME} element = {<Home/>} />
+                <Route path= {path.LOGIN} element = {<Login/>} />
+                <Route path= {path.START} element = {<Home/>} />
+            </Route>
+        </Routes>
     </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        />
+<ToastContainer />
+    </>
   );
 }
-
 export default App;
