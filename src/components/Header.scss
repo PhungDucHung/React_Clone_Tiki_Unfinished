@@ -1,0 +1,73 @@
+.text-logo{
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.menu{
+    position: relative;
+    z-index: 1;
+    .icon{
+        position: absolute;
+        top: 6px;
+        left: 25px;
+        z-index: 5;
+    }
+}
+
+.menu2{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.home{
+    font-size: 25px;
+    color: blue;
+}
+
+.TC{
+    border: none;
+    background-color: white;
+    width: 140px;
+    border-radius: 10px;
+    color: blue;
+}
+
+.TC:hover{
+    background-color: #e6e6ff;
+}
+
+.TK{
+    border: none;
+    background-color: white;
+    width: 140px;
+    border-radius: 10px;
+}
+
+.TK:hover{
+    background-color: #e6e6ff;
+}
+
+.icontk{
+    font-size: 25px;
+}
+
+.iconCart{
+    font-size: 25px;
+    color: blue;
+}
+
+.Cart{
+    border: none;
+    background-color: white;
+    border-left: 1px solid #e6e6ff;
+ }
+.text{
+    font-size: large;
+    text-align: center;
+        .location{
+            font-weight: 600;
+            color: black;
+ }
+}
+

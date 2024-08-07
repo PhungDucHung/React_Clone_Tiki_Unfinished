@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Routes, Route} from 'react-router-dom';
 import path from './ultis/path';
-
+import './App.scss'
 
 function App() {
   const { test } = useSelector(state => state.app)

@@ -4,7 +4,7 @@ import React from 'react'
 const SidebarLeft = () => {
   return (
     <div >
-        <div>
+        <div className='container'>
             SidebarLeft
         </div>
       
