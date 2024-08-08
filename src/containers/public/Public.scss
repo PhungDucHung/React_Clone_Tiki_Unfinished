@@ -4,7 +4,25 @@
     box-sizing: border-box;
     background-color: rgb(245, 245, 250) ;
     height: 100%;
+    
     .Header{
         background-color: white ;
+    }
+    .cha{
+        display: flex;
+
+        .SideLeft{
+            width: 230px;
+            max-height: 100vh;
+            padding: 7px 0px 7px 0px;
+            background-color: white ;
+            
+        }
+        .home{
+            width: 100%;
+            margin-left: 1rem;
+            background-color: white ;
+
+        }
     }
 }

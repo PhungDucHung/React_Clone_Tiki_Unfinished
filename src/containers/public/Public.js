@@ -10,14 +10,17 @@ const Public = () => {
                 <div >       
                     <Header/>
                 </div>   
-            </div>
-            <div className="SideLeft">
-                <SidebarLeft/>
-            </div>
-            <div >              
-                <Outlet/>
-            </div>
+            </div> 
+            <div className="container cha">    
+                <div className=" SideLeft">
+                    <SidebarLeft/>
+                </div>
+               
+                <div className="home">              
+                    <Outlet/>
+                </div>
 
+            </div>  
         </div>
     )
 }

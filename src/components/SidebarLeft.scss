@@ -1,0 +1,31 @@
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  
+  &:hover {
+    color: #0F7070;
+  }
+}
+
+.bt{
+  width: 196px;
+  border-radius: 8px;
+  gap: 5px;
+  border: none;
+  background-color: white;
+}
+
+.bt:hover{
+  background-color: #e6e6ff;
+
+}
+

@@ -6,6 +6,10 @@ import { IoHome } from "react-icons/io5";
 import { FaRegSmileWink } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
+import { camketMenu } from '../ultis/camketMenu';
+import { NavLink } from 'react-router-dom'
+import { menu1 } from '../ultis/menu1';
+
 
 const Header = () => {
   return (
@@ -26,13 +30,15 @@ const Header = () => {
                   </div>  
 
                   <div className='col-12 menu2'>
-                      <a>điện gia dụng</a>
-                      <a>xe cộ</a>   
-                      <a>mẹ & bé</a>   
-                      <a>khỏe đẹp</a>
-                      <a>nhà cửa</a>   
-                      <a>sách</a>   
-                      <a>thể thao</a>   
+                     {menu1.map(item =>(
+                      <NavLink
+                        to={item.path}
+                        key={item.key}
+                        className='text2'
+                      >
+                        <span>{item.text}</span>
+                      </NavLink>
+                     ))} 
                     </div>              
                 </div>
             </div>
@@ -70,13 +76,20 @@ const Header = () => {
         </div>
     </div>
     <hr/> 
-    <div className='container'>
-        <div className='row'>
-            <div className='col-2'>
-                Cam kết
-            </div>
-        </div>
-      </div>
+    <div className='container ck'>
+        <b>Cam kết</b>
+        {camketMenu.map(item => (
+          <NavLink
+            to={item.path}
+            key={item.key}
+            className='camket'
+          >
+            {item.icons}
+            <span className='text'>{item.text}</span>
+          </NavLink>
+        ))}
+    </div>
+
       <hr/>
     </>
   )
